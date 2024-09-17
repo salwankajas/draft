@@ -1,0 +1,28 @@
+---
+import Image from "astro/components/Image.astro";
+import coverimage from "../assets/herosection/Screenshot from 2024-09-16 12-18-41.png";
+---
+
+<section class="text-center py-24 ">
+  <h1 class="font-bold text-4xl text-center">
+    A new way to create <br /> documents
+  </h1>
+  <p class="text-xl text-secondary-gray-600 py-2">
+    Wraft makes creating documents at scale easy
+  </p>
+  <div class="p-2 ">
+    <button
+      class="text-xl bg-green-500 text-secondary-white-100 py-3 px-5 rounded-xl font-bold bg-primary-green-500 hover:bg-primary-green-800"
+      >Get started<button></button>
+      <button
+        class="text-xl bg-green-500 text-white py-3 px-5 rounded-xl font-bold border border-primary-green-600 hover:bg-primary-green-800"
+        >Watch Demo<button></button>
+      </button>
+      <Image
+        src={coverimage}
+        alt="Hero section cover"
+        class="mx-auto my-8 flex-shrink-0 w-full lg:max-w-6xl h-auto object-cover border border-y-secondary-white-100 "
+      />
+    </button>
+  </div>
+</section>

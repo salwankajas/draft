@@ -1,0 +1,101 @@
+---
+import content from "../Data/siteContent.json";
+const features = content.features;
+---
+
+<section class="container mx-auto px-4 lg:px-8 max-w-4xl">
+  <h1 class="text-xl font-bold pb-2">Open Document Lifecycle</h1>
+  <p class="text-secondary-gray-600">
+    Future proof way to sustain your companies document, end-to-end.
+  </p>
+  <!-- First Row (Full-width) -->
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 bg-white border border-secondary-white-100 rounded-lg p-6"
+  >
+    <!-- Text Content -->
+    <div class="flex-1 lg:pr-6">
+      <h3 class="text-xs text-secondary-gray-600 mb-2">
+        {features[0]?.subtitle}
+      </h3>
+      <h2 class="text-xl lg:text-lg font-bold mb-4">{features[0]?.title}</h2>
+      <p class="text-sm lg:text-sm mb-4">{features[0]?.description}</p>
+    </div>
+    <!-- Image Content -->
+    <div class="flex-shrink-0 w-full lg:w-auto">
+      <img
+        src={features[0]?.imageUrl}
+        alt={features[0]?.title}
+        class="rounded-md w-full h-auto object-cover"
+      />
+    </div>
+  </div>
+
+  <!-- Second Row (Two Columns) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+    <!-- First Column -->
+    <div
+      class="bg-white border border-secondary-white-100 rounded-lg p-4 lg:p-4"
+    >
+      <img
+        src={features[1]?.imageUrl}
+        alt={features[1]?.title}
+        class="rounded-md w-full h-auto object-cover lg:max-w-xs lg:max-h-40 mx-auto"
+      />
+      <h3 class="text-xs text-secondary-gray-600 mb-1 pt-3">
+        {features[1]?.subtitle}
+      </h3>
+      <h2 class="text-xl lg:text-lg font-extrabold mb-2">
+        {features[1]?.title}
+      </h2>
+      <p class="text-gray-600 text-sm lg:text-sm mb-3">
+        {features[1]?.description}
+      </p>
+    </div>
+
+    <!-- Second Column -->
+    <div
+      class="bg-white border border-secondary-white-100 rounded-lg p-4 lg:p-4"
+    >
+      <img
+        src={features[2]?.imageUrl}
+        alt={features[2]?.title}
+        class="rounded-md w-full h-auto object-cover lg:max-w-xs lg:max-h-40 mx-auto"
+      />
+      <h3 class="text-xs text-secondary-gray-600 pt-3 mb-1">
+        {features[2]?.subtitle}
+      </h3>
+      <h2 class="text-xl lg:text-lg font-extrabold mb-2">
+        {features[2]?.title}
+      </h2>
+      <p class="text-gray-600 text-sm lg:text-sm mb-3">
+        {features[2]?.description}
+      </p>
+    </div>
+  </div>
+
+  <!-- Third Row (Full-width) -->
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 bg-white border border-secondary-white-100 rounded-lg p-6"
+  >
+    <!-- Text Content -->
+    <div class="flex-1 lg:pr-6">
+      <h3 class="text-xs mb-2 text-secondary-gray-600">
+        {features[3]?.subtitle}
+      </h3>
+      <h2 class="text-xl lg:text-lg font-extrabold mb-4">
+        {features[3]?.title}
+      </h2>
+      <p class="text-gray-600 text-sm lg:text-sm mb-4">
+        {features[3]?.description}
+      </p>
+    </div>
+    <!-- Image Content -->
+    <div class="flex-shrink-0 w-full lg:w-auto">
+      <img
+        src={features[3]?.imageUrl}
+        alt={features[3]?.title}
+        class="rounded-md w-full h-auto object-cover"
+      />
+    </div>
+  </div>
+</section>
