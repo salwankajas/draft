@@ -1,16 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: 'class',
   theme: {
     colors: {
       primary: {
         green: {
+      
+          200:"#8dceb3",
+          300:"#00a65e3f",
           400: "#012A1E",
-          500: "#025239",
-          600: "#60895A",
-          700: "#628C5B",
-          800: "#638D5C",
-          900: "#1A2517"
+          500: "#004A0F",
+          600: "#0e7b5c",
+          700: "#203f32",
+          800: "#006f50",
+          900: "#e3f7ee",
+          950:"#00b7651c",
+          1000: "#a4f3d2",
+          1050:"#00ffa21e"
         },
         blue: {
           100: "#01000B"
@@ -20,7 +27,7 @@ export default {
         white: {
           100: "#E5EADC",
           200: "#FCFBFD",
-          300: "#FFFFFF",
+          300: "#f4fbf8",
           400: "#FBFFF5",
           500: "#F6F6F6"
         },
@@ -31,17 +38,26 @@ export default {
           300: "#1A1A18",
           400: "#555555",
           500: "#6F6F6E",
-          600: "#C0C0C0",
-          700: "#DBDFDC",
+          600: "#475467",
+          700: "#F9FAFB",
           800: "#2C2C2A",
-          900: "#191918"
+          900: "#191918",
+          1000:"#747e7b",
+        },
+        black:{
+        50: "#000000",
         }
       }
     },
     extend: {
       fontFamily: {
         sans: ["Lato", "sans-serif"]
-      }
+      },
+      backgroundImage: {
+        'svg-pattern': "url('/src/style/background-image/background-pattern.svg')", 
+        
+      },
+      
     }
   },
   plugins: [
@@ -52,7 +68,8 @@ export default {
           "-ms-overflow-style": "none"
         },
         ".no-scrollbar::-webkit-scrollbar": {
-          display: "none"
+          display: "none",
+        
         }
       };
       addUtilities(newUtilities);

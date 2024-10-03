@@ -1,22 +1,61 @@
 ---
+import logo from '../assets/logo/vector.png';
+import Image from "astro/components/Image.astro";
 
 ---
 
-<header
-  class="flex flex-col md:flex-row justify-between items-center p-5 shadow-md bg-secondary-white-200 mx-auto"
->
-  <div class="text-2xl font-bold mb-4 md:mb-0">_Brand</div>
+<header class="relative   flex flex-col md:flex-row justify-between items-center p-4 bg-secondary-white-200 dark:bg-secondary-black-50   mx-auto transition-colors duration-300">  <div class="flex justify-between items-center  w-full mx-2 md:w-auto">
+    <figure class=" cursor-pointer w-[80px] h-auto ">
+      <Image
+      src={logo}
+      alt="logo"
+      class="object-cover dark:invert "
+    />
+    </figure>
+    <button class="block md:hidden text-3xl focus:outline-none" id="menu-btn" aria-label="Toggle Menu">
+      &#9776;
+    </button>
+  </div>
 
-  <nav
-    class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 items-center"
-  >
-    <a href="#" class="font-bold py-4 text-lg">Features</a>
-    <a href="#" class="font-bold py-4 text-lg">Use Case</a>
-    <a href="#" class="font-bold py-4 text-lg">Login</a>
-    <button
-      class="text-lg bg-green-500 text-white py-3 px-5 rounded-xl font-bold border border-primary-green-600 hover:text-primary-green-800"
-    >
+  <nav class="hidden md:flex  items-center mx-2">
+<div class="md:flex-row md:space-x-6 px-3 py-3">
+  <a href="#" class="font-bold py-4  text-sm text-secondary-black-50 dark:text-secondary-white-100  hover:text-primary-green-800 dark:hover:text-primary-green-800">Features</a>
+  <a href="#" class="font-bold py-4  text-sm text-secondary-black-50 dark:text-secondary-white-100  hover:text-primary-green-800 dark:hover:text-primary-green-800"> Use Cases</a>
+  <a href="#" class="font-bold py-4  mx-auto text-sm text-secondary-black-50 dark:text-secondary-white-100 hover:text-primary-green-800 dark:hover:text-primary-green-800">Login</a>
+</div>
+    <button class="text-sm text-primary-green-500 py-3 px-3 rounded-xl font-bold border border-primary-green-600 hover:bg-primary-green-300 hover:text-primary-green-200 dark:text-primary-green-200 dark:hover:text-primary-green-800 hover:border-primary-green-300 dark:hover:border-primary-green-300 transition-colors duration-150 ease-in-out">
+      Request Invite
+    </button>
+    
+    
+  </nav>
+
+  <div id="overlay" class="hidden fixed inset-0 bg-secondary-gray-400 opacity-50 z-10 md:hidden"></div>
+
+  <nav id="menu" class="hidden absolute top-full left-0 w-full bg-secondary-white-500  flex-col space-y-4 p-5 z-20 md:hidden">
+    <div class="flex flex-col">
+      <a href="#" class="font-bold py-4 text-lg text-secondary-black-50 hover:text-primary-green-800 dark:hover:text-primary-green-800">Features</a>
+      <a href="#" class="font-bold py-4 text-lg text-secondary-black-50 hover:text-primary-green-800 dark:hover:text-primary-green-800">Use Case</a>
+      <a href="#" class="font-bold py-4 text-lg text-secondary-black-50 hover:text-primary-green-800 dark:hover:text-primary-green-800">Login</a>
+    </div>
+    <button class="text-lg bg-green-500 text-secondary-black-50 py-3 px-5 rounded-xl font-bold border-primary-green-600 hover:text-primary-green-800">
       Request Invite
     </button>
   </nav>
 </header>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+  const overlay = document.getElementById("overlay");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    overlay.classList.toggle("hidden");
+  });
+
+  overlay.addEventListener("click", () => {
+    menu.classList.add("hidden");
+    overlay.classList.add("hidden");
+  });
+</script>

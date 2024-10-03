@@ -1,0 +1,49 @@
+/* Add these classes to your global CSS file */
+
+/* Base transitions for smooth theme switching */
+* {
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  /* Dark mode styles for your existing sections */
+  .dark body {
+    background-color: var(--secondary-gray-300);
+    color: var(--secondary-white-100);
+  }
+  
+  /* Header styles */
+  .dark header {
+    background-color: var(--secondary-gray-800) !important;
+  }
+  
+  .dark header a {
+    color: var(--secondary-white-100);
+  }
+  
+  .dark header button {
+    border-color: var(--secondary-gray-400);
+    color: var(--secondary-white-100);
+  }
+  
+  /* Card section styles */
+  .dark .bg-white,
+  .dark .bg-secondary-white-200,
+  .dark .bg-secondary-white-300,
+  .dark .bg-secondary-white-500 {
+    background-color: var(--secondary-gray-800);
+  }
+  
+  .dark .text-secondary-black-50,
+  .dark .text-secondary-gray-600 {
+    color: var(--secondary-white-100);
+  }
+  
+  .dark .border-secondary-white-100 {
+    border-color: var(--secondary-gray-400);
+  }
+  
+  /* Bottom banner section */
+  .dark .bg-green-100,
+  .dark .bg-primary-green-900 {
+    background-color: var(--primary-green-400);
+  }
