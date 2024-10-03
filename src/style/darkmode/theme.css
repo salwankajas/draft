@@ -1,11 +1,8 @@
-/* Add these classes to your global CSS file */
 
-/* Base transitions for smooth theme switching */
 * {
     transition: background-color 0.3s, border-color 0.3s;
   }
   
-  /* Dark mode styles for your existing sections */
   .dark body {
     background-color: var(--secondary-gray-300);
     color: var(--secondary-white-100);
