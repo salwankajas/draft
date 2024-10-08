@@ -15,7 +15,7 @@
   padding-left: calc(100% - 83rem) ;
   display: flex;
   scroll-snap-align: start;
-  gap: 1.25rem;
+  gap: 32px;
   
 
 }

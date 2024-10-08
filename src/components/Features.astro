@@ -3,72 +3,74 @@ import content from "../Data/siteContent.json";
 const features = content.features;
 ---
 
-<section class="dark:bg-secondary-black-50 ">
-  <div class="container mx-auto max-w-[860px]   px-4 sm:px-6 lg:px-8">
-    <div class="max-w-[904px]  mx-auto -mt-14 ">
-      <h1 class="text-2xl text-secondary-black-50 dark:text-secondary-white-500 font-bold">Open Document Lifecycle</h1>
-      <p class="text-secondary-gray-600 dark:text-secondary-gray-1000 text-lg  ">
-        Future proof way to sustain your companies document, end-to-end.
-      </p>
+<section class="">
+  <div class="container mx-auto max-w-[1140px] px-4 sm:px-0">
+    <div class="masx-w-[904px]  mx-auto mb-32 ">
+      <div class="mt-24 mb-16 md:mt-32 md:mb-24">
+        <h1 class="text-2xl md:text-3xl text-secondary-black-50 dark:text-secondary-white-500 font-bold leading-[1.5]">Open Document Lifecycle</h1>
+        <p class="text-secondary-gray-600 dark:text-secondary-gray-1000 text:xl md:text-2xl font-light">
+          Future proof way to sustain your companies document, end-to-end.
+        </p>
+      </div>
       <!-- First Row -->
-      <div class="grid grid-cols-1 h-auto md:h-[270px]  md:grid-cols-2 gap-8  mt-24 bg-white border border-secondary-white-100 dark:border-secondary-gray-50  rounded-lg p-4 sm:p-6">
+      <div class="grid grid-cols-1 h-auto md:h-[270spx]  mb-10 md:grid-cols-2 gap-8 bg-white border border-secondary-white-100 dark:border-secondary-gray-50  rounded-lg p-4 sm:p-12">
         <!-- Text Content -->
         <div class="flex flex-col justify-center md:pr-6">
-          <h3 class="text-xs text-secondary-gray-600 dark:text-secondary-gray-100 mb-2">{features[0]?.subtitle}</h3>
-          <h2 class="text-xl dark:text-secondary-white-500 md:text-lg font-bold mb-4">{features[0]?.title}</h2>
-          <p class="text-sm dark:text-secondary-white-500 md:text-sm">{features[0]?.description}</p>
+          <h3 class="text-base font-light text-secondary-gray-600 dark:text-secondary-gray-100 mb-2">{features[0]?.subtitle}</h3>
+          <h2 class="text-xl dark:text-secondary-white-500 md:text-2xl font-bold mb-4">{features[0]?.title}</h2>
+          <p class="text-sm dark:text-secondary-white-500 md:text-xl md:font-light">{features[0]?.description}</p>
         </div>
         <!-- Image Content -->
         <div class="flex items-center justify-center">
           <img
             src={features[0]?.imageUrl}
             alt={features[0]?.title}
-            class="rounded-md w-full h-auto object-cover md:max-w-[400px] md:max-h-[300px]"
+            class="rounded-md w-full h-auto object-cover"
           />
         </div>
       </div>
   
       <!-- Second Row (Two Columns) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-[40px]">
         <!-- First Column -->
-        <div class="bg-white border border-secondary-white-100 dark:border-secondary-gray-50 rounded-lg p-4">
+        <div class="bg-white border border-secondary-white-100 dark:border-secondary-gray-50 rounded-lg p-4 sm:p-7">
           <img
             src={features[1]?.imageUrl}
             alt={features[1]?.title}
-            class=" w-full  h-auto object-cover md:max-w-[250px] md:max-h-[250px] "
+            class=" w-full  h-auto object-cover md:max-w-[80%]"
           />
-          <h3 class="text-xs  text-secondary-gray-600 dark:text-secondary-gray-100 mb-1 pt-3">{features[1]?.subtitle}</h3>
-          <h2 class="text-xl dark:text-secondary-white-500 md:text-lg font-extrabold mb-2">{features[1]?.title}</h2>
-          <p class=" dark:text-secondary-white-500 text-sm md:text-sm mb-3">{features[1]?.description}</p>
+          <h3 class="text-base font-light text-secondary-gray-600 dark:text-secondary-gray-100 mb-1 pt-3 sm:pt-12">{features[1]?.subtitle}</h3>
+          <h2 class="text-xl dark:text-secondary-white-500 md:text-2xl font-extrabold mb-2">{features[1]?.title}</h2>
+          <p class=" dark:text-secondary-white-500 text-sm md:text-xl mb-3 md:font-light">{features[1]?.description}</p>
         </div>
   
         <!-- Second Column -->
-        <div class="bg-white border border-secondary-white-100 dark:border-secondary-gray-50 rounded-lg p-4">
+        <div class="bg-white border border-secondary-white-100 dark:border-secondary-gray-50 rounded-lg p-4 sm:p-7">
           <img
             src={features[2]?.imageUrl}
             alt={features[2]?.title}
-            class=" w-full h-auto object-cover md:max-w-[250px] md:max-h-[250px] "
+            class=" w-full h-auto object-cover md:max-w-[80%]"
           />
-          <h3 class="text-xs text-secondary-gray-600 dark:text-secondary-gray-100 pt-3 mb-1">{features[2]?.subtitle}</h3>
-          <h2 class="text-xl dark:text-secondary-white-500 md:text-lg font-extrabold mb-2">{features[2]?.title}</h2>
-          <p class="dark:text-secondary-white-500 text-sm md:text-sm mb-3">{features[2]?.description}</p>
+          <h3 class="text-base font-light text-secondary-gray-600 dark:text-secondary-gray-100 pt-3 sm:pt-12 mb-1">{features[2]?.subtitle}</h3>
+          <h2 class="text-xl dark:text-secondary-white-500 md:text-2xl font-extrabold mb-2">{features[2]?.title}</h2>
+          <p class="dark:text-secondary-white-500 text-sm md:text-xl mb-3 md:font-light">{features[2]?.description}</p>
         </div>
       </div>
   
       <!-- Third Row -->
-      <div class="grid grid-cols-1 h-auto md:h-[270px] md:grid-cols-2 gap-8 mt-8 bg-white border border-secondary-white-100 dark:border-secondary-gray-50 rounded-lg p-4 sm:p-6">
+      <div class="grid grid-cols-1 h-auto md:h-[270psx] md:grid-cols-2 gap-8 mt-10 bg-white border border-secondary-white-100 dark:border-secondary-gray-50 rounded-lg p-4 sm:p-12">
         <!-- Text Content -->
         <div class="flex flex-col justify-center md:pr-6">
-          <h3 class="text-xs mb-2 text-secondary-gray-600 dark:text-secondary-gray-100">{features[3]?.subtitle}</h3>
-          <h2 class="text-xl dark:text-secondary-white-500 md:text-lg font-extrabold mb-4">{features[3]?.title}</h2>
-          <p class="dark:text-secondary-white-500 text-sm md:text-sm">{features[3]?.description}</p>
+          <h3 class="text-base font-light mb-2 text-secondary-gray-600 dark:text-secondary-gray-100">{features[3]?.subtitle}</h3>
+          <h2 class="text-xl dark:text-secondary-white-500 md:text-2xl font-extrabold mb-4">{features[3]?.title}</h2>
+          <p class="dark:text-secondary-white-500 text-sm md:text-xl md:font-light">{features[3]?.description}</p>
         </div>
         <!-- Image Content -->
         <div class="flex items-center justify-center">
           <img
             src={features[3]?.imageUrl}
             alt={features[3]?.title}
-            class="rounded-md w-full h-auto object-cover md:max-w-[400px] md:max-h-[300px]"
+            class="rounded-md w-full h-auto object-cover md:max-w-[40s0px] md:max-h-[30s0px]"
           />
         </div>
       </div>

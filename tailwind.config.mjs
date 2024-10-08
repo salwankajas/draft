@@ -51,7 +51,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Lato", "sans-serif"]
+        sans: ["Mona Sans", "sans-serif"]
       },
       backgroundImage: {
         'svg-pattern': "url('/src/style/background-image/background-pattern.svg')", 

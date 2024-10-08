@@ -1,34 +1,38 @@
 ---
 import Image from "astro/components/Image.astro";
-import coverimage from "../assets/herosection/image 3.png";
+import coverimage from "../assets/hero/home01.png";
 ---
-
-<section class="text-center dark:bg-secondary-black-50 py-20 da">
-<div class="absolute inset-0 bg-svg-pattern bg-no-repeat bg-center bg-cover opacity-25 pointer-events-none z-0 mb-16 md:mb-32 lg:mb-0 max-w-full md:max-w-6xl mx-auto"></div>
-
+<section class="text-center">
+  
   <div class="relative z-10  py-4 ">
-    <h1 class="font-bold text-4xl dark:text-secondary-white-500 ">
-      A new way to create <br /> documents
-    </h1>
-    <p class="text-2xl text-secondary-gray-600 dark:text-secondary-gray-1000 mb-2 ">
-      Wraft makes creating documents at scale easy
-    </p>
-    <div class="p-2">
+    <div class="absolute inset-0 bg-svg-pattern bg-no-repeat bg-[center_center] bg-cover opacity-25 pointer-events-none z-[-1]"></div>
+    <div class="px-[32px]">
+      <h1 class="font-bold text-4xl md:text-5xl dark:text-secondary-white-500 pt-32 mb-4">
+        A new way to create <br /> documents
+      </h1>
+      <p class="text-2xl md:text-3xl text-secondary-gray-600 dark:text-secondary-gray-1000 mb-2 ">
+        Wraft makes creating documents at scale easy
+      </p>
+
+    </div>
+    <div class="mt-4 flex justify-center gap-[8px]">
       <button
-        class="text-sm text-secondary-white-500 dark:text-secondary-black-50 py-3 px-4 rounded-xl font-bold bg-primary-green-800 border-primary-green-600 hover:bg-primary-green-600 transition-colors duration-150 ease-in-out"
+        class="text-lg text-secondary-white-500 dark:text-secondary-black-50 py-3 px-4 rounded-xl font-bold bg-primary-green-800 border-primary-green-600 hover:bg-primary-green-600 transition-colors duration-150 ease-in-out"
       >
         Get started
       </button>
       <button
-        class="text-sm text-primary-green-700 dark:text-primary-green-1000 hover:bg-secondary-white-300 hover:border-primary-green-300 hover:text-primary-green-200 py-3 px-4 rounded-xl font-bold border border-primary-green-600 transition-colors duration-150 ease-in-out"
+        class="text-lg text-primary-green-700 dark:text-primary-green-1000 hover:bg-secondary-white-300 hover:border-primary-green-300 hover:text-primary-green-200 py-3 px-4 rounded-xl font-bold border border-primary-green-600 transition-colors duration-150 ease-in-out"
       >
         Watch Demo
       </button>
     </div>
-    <Image
-      src={coverimage}
-      alt="Hero section cover"
-      class="mx-auto my-4 flex-shrink-0 w-full max-w-full lg:max-w-[1004px] md:max-w-[550px] h-auto object-cover py-16 "
-    />
+    <div class="mt-12 md:mt-24">
+      <Image
+        src={coverimage}
+        alt="Hero section cover"
+        class="mx-auto flex-shrink-0 w-[90%] md:w-[60%] max-w-full lg:max-w-[1004px] md:max-w-[550px] h-auto object-cover"
+      />
+    </div>
   </div>
 </section>

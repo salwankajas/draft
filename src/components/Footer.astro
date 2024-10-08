@@ -4,51 +4,53 @@ import Image from "astro/components/Image.astro";
 import ThemeMode from './ThemeMode.astro';
 ---
 
-<footer class="dark:bg-secondary-black-50 ">
+<footer class="">
   <!-- Top section -->
- <div class=" mx-auto  max-w-[900px] p-5 py-24 ">
+ <div class=" mx-auto  max-w-[1140px] p-5 ">
   <div
   class="flex flex-col py-0  mt-4  lg:py-10 md:py-5 md:flex-row justify-between md:items-center space-y-6 md:space-y-0"
 >
-<figure class=" cursor-pointer w-[80px] h-auto ">
-  <Image
+<figure class=" cursor-pointer w-[80px] h-auto dark:fill-[#ffff] fill-black">
+  <!-- <Image
   src={logo}
   alt="logo"
   class="object-cover dark:invert "
-/>
+/> -->
+<svg viewBox="0 0 115.92 36.37" color="inherit" height="2rem" width="6rem"><path color="inherit" d="M39.52 23.51l-.22 1.62h-.25l-.26-1.62-3.36-13.29h-4.94l-3.33 13.25-.21 1.15-.25-.05-.13-1.06-2.68-13.29h-6.05l5.41 21.3h6.51l3.07-11.63h.25l3.07 11.63h6.82l5.45-21.3h-6.09l-2.81 13.29zm18.56-11.07l-.25-.09v-2.13h-5.92v21.34h5.92V17.12a6.92 6.92 0 014.72-1.87h.86V9.8h-.51a6.19 6.19 0 00-4.82 2.64zm20.15-.86l-.26.09a6.52 6.52 0 00-4.85-1.87c-5.24 0-8.44 4.89-8.44 11.07s3.07 11.07 8 11.07A6.36 6.36 0 0078 29.43l.26.08v2h5.92V10.22h-5.95zm0 12.61a4.5 4.5 0 01-4.39 2.94c-2.26 0-3.24-2.64-3.24-6.26s1-6.22 3.24-6.22a6.73 6.73 0 014.39 1.49zM99.14 4.86a9.17 9.17 0 012.89.46l.73-4.43A10.27 10.27 0 0098.37 0c-4.73 0-7.75 3.28-7.75 8.3v1.92h-2.94v4.52h2.94v16.78h5.92V14.74h4v-4.52h-4V8.3c0-2.38.89-3.44 2.6-3.44zm16.05 21.33a5.37 5.37 0 01-2.17.43c-1.28 0-2.17-.9-2.17-3v-8.88h4.3v-4.52h-4.3V3.41H105v6.81h-2.64v4.52H105v9.15c0 5 2.94 7.84 6.94 7.84a8.39 8.39 0 004-.9zM0 31.68h16.83v4.69H0z"></path></svg>
+
 </figure>
 
   <div
-    class="flex flex-wrap justify-center md:justify-start space-x-2  md:space-x-6"
+    class="flex flex-wrap justify-center md:justify-start gap-8  md:gap-6 text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 text-base font-normal"
   >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Overview</a
     >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Features</a
     >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Pricing</a
     >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Careers</a
     >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Help</a
     >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Privacy</a
     >
   </div>
@@ -57,32 +59,35 @@ import ThemeMode from './ThemeMode.astro';
 <div
   class="flex flex-col md:flex-row justify-between items-center mt-8 space-y-6 md:space-y-0"
 >
-  <p class="text-secondary-gray-600 dark:text-secondary-gray-1000 text-xs text-center md:text-left">
+  <p class="text-secondary-gray-600 dark:text-secondary-gray-1000 text-base font-light text-center md:text-left">
     &copy; 2024 Functionary Labs Pvt Ltd. All Rights Reserved.
   </p>
 
   <div
-    class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6"
+    class="flex flex-wrap justify-center text-base font-normal md:justify-end gap-8 md:gap-6 text-secondary-gray-600 dark:text-secondary-white-500 "
   >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 dark:hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Terms</a
     >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 dark:hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Privacy</a
     >
     <a
       href="#"
-      class="text-secondary-gray-600 dark:text-secondary-white-500 hover:text-primary-green-800 dark:hover:text-primary-green-800 text-xs"
+      class="hover:text-primary-green-800 dark:hover:text-primary-green-800"
       >Cookies</a
     >
   </div>
  
 </div>
-<ThemeMode/>
+<div class="mt-4">
+  <ThemeMode/>
+
+</div>
 
  </div>
 
