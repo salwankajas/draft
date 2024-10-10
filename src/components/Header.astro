@@ -33,8 +33,8 @@ import Image from "astro/components/Image.astro";
   <nav id="menu" class="hidden absolute text-lg text-secondary-black-50 dark:text-[#fff_!important] top-full left-0 w-full  h-[100vh] bg-secondary-white-500 dark:bg-[#111111] flex-col space-y-4 p-5 z-20 md:hidden overflow-y-hidden">
     <div class="flex flex-col">
       <a href="#" class="py-4  hover:text-primary-green-800 dark:hover:text-primary-green-800 transition-colors duration-150 ease-in-out">Features</a>
-      <a href="#" class="py-4  hover:text-primary-green-800 dark:hover:text-primary-green-800 transition-colors duration-150 ease-in-out">Use Case</a>
-      <a href="#" class="py-4  hover:text-primary-green-800 dark:hover:text-primary-green-800 transition-colors duration-150 ease-in-out">Login</a>
+      <a href="https://docs.wraft.app/" class="py-4  hover:text-primary-green-800 dark:hover:text-primary-green-800 transition-colors duration-150 ease-in-out">Docs</a>
+      <a href="http://app.wraft.co/login" class="py-4  hover:text-primary-green-800 dark:hover:text-primary-green-800 transition-colors duration-150 ease-in-out">Login</a>
     </div>
     <button class="text-lg font-semibold w-full text-primary-green-700 hover:bg-secondary-white-300 hover:border-primary-green-300 hover:text-primary-green-200 dark:bg-primary-green-800 dark:text-secondary-black-50 dark:hover:bg-primary-green-600 border-[1px] py-3 px-5 rounded-xl border-primary-green-600 transition-colors duration-150 ease-in-out">
       Request Invite
@@ -49,7 +49,7 @@ import Image from "astro/components/Image.astro";
   const menu = document.getElementById("menu");
 
   menuBtn.addEventListener("click", () => {
-    body.classList.toggle("overflow-y-hidden")
+    body.classList.toggle("overflow-hidden")
     menu.classList.toggle("hidden");
     menuBtn.classList.toggle("hidden");
     menuBtn.classList.toggle("block");
@@ -57,7 +57,7 @@ import Image from "astro/components/Image.astro";
     menuBtnCross.classList.toggle("block");
   });
   menuBtnCross.addEventListener("click", () => {
-    body.classList.toggle("overflow-y-hidden")
+    body.classList.toggle("overflow-hidden")
     menu.classList.toggle("hidden");
     menuBtn.classList.toggle("hidden");
     menuBtn.classList.toggle("block");
