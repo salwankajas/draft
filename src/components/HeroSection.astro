@@ -3,7 +3,13 @@ import Image from "astro/components/Image.astro";
 import coverimage from "../assets/hero/home01.png";
 ---
 <section class="text-center">
-  
+  <style>
+        .popup-container.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+    
   <div class="relative z-10  py-4 ">
     <div class="absolute inset-0 bg-svg-pattern bg-no-repeat bg-[center_center] bg-cover opacity-25 pointer-events-none z-[-1]"></div>
     <div class="px-[32px]">
@@ -21,12 +27,21 @@ import coverimage from "../assets/hero/home01.png";
       >
         Get started
       </button>
-      <button
+      <button id="popup-button"
         class="text-lg text-primary-green-500 py-3 px-3 rounded-xl font-bold border border-primary-green-600 hover:bg-primary-white-300 hover:text-primary-green-200 dark:text-primary-green-200 dark:hover:text-primary-green-800 hover:border-primary-green-300 dark:hover:border-primary-green-300 transition-colors duration-150 ease-in-out"
       >
         Watch Demo
       </button>
     </div>
+
+    <div id="popup-container" class="popup-container fixed top-0 left-0 w-full h-full z-[9999] flex items-center justify-center bg-[rgba(0,0,0,0.8)] opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+      <span class="close-button font-medium absolute top-[30px] right-[30px] text-[#fff] cursor-pointer text-xl" id="close-button">&#10005;</span>
+      <div class="video-container z-[1] relative w-[90%] pt-[56.25%]max-w-[800px] my-0 mx-auto sm:w-[700px] sm:h-[393.75px] md:w-[800px] md:h-[450px]">
+          <iframe id="youtube-iframe" src="" class="absolute top-0 left-0 w-full h-full" allowfullscreen></iframe>
+      </div>
+      <div class="w-full h-full z-[-1] absolute" id="close-container"></div>
+    </div>
+
     <div class="mt-12 md:mt-24">
       <Image
         src={coverimage}
@@ -35,4 +50,42 @@ import coverimage from "../assets/hero/home01.png";
       />
     </div>
   </div>
+  <script>
+    const body = document.getElementsByTagName("body")[0];
+    function openPopup(videoId) {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe') as HTMLIFrameElement;
+
+            youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+            popupContainer.classList.add('show');
+        }
+        function closePopup() {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe') as HTMLIFrameElement;
+            
+            // popupContainer.remove()
+            youtubeIframe.src = "";
+            popupContainer.classList.remove('show');
+        }
+
+        var popupButton = document.getElementById('popup-button');
+        popupButton.addEventListener('click', function() {
+          body.classList.toggle("overflow-y-hidden")
+            openPopup("I71DmG_t3rA?si=fYvnDjHdWdRhilx5?rel=0&modestbranding=1&autoplay=1");
+        });
+
+        var popupCloseButton = document.getElementById('close-button');
+        popupCloseButton.addEventListener('click', function() {
+          body.classList.toggle("overflow-y-hidden")
+          closePopup();
+        });
+        
+        var popupCloseButton = document.getElementById('close-container');
+        popupCloseButton.addEventListener('click', function() {
+          body.classList.toggle("overflow-y-hidden")
+          closePopup();
+        });
+        
+  </script>
+
 </section>

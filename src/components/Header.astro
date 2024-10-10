@@ -6,11 +6,6 @@ import Image from "astro/components/Image.astro";
 
 <header class="relative flex flex-col md:flex-row justify-between items-center dark:bg-[#111111] p-4 bg-white mx-auto transition-colors duration-300">  <div class="flex justify-between items-center  w-full mx-2 md:w-auto">
     <figure class="cursor-pointer w-[80px] h-auto dark:fill-[#ffff] fill-black">
-      <!-- <Image
-      src={logo}
-      alt="logo"
-      class="object-cover dark:invert "
-    /> -->
       <svg viewBox="0 0 115.92 36.37" color="inherit" height="2rem" width="6rem"><path color="inherit" d="M39.52 23.51l-.22 1.62h-.25l-.26-1.62-3.36-13.29h-4.94l-3.33 13.25-.21 1.15-.25-.05-.13-1.06-2.68-13.29h-6.05l5.41 21.3h6.51l3.07-11.63h.25l3.07 11.63h6.82l5.45-21.3h-6.09l-2.81 13.29zm18.56-11.07l-.25-.09v-2.13h-5.92v21.34h5.92V17.12a6.92 6.92 0 014.72-1.87h.86V9.8h-.51a6.19 6.19 0 00-4.82 2.64zm20.15-.86l-.26.09a6.52 6.52 0 00-4.85-1.87c-5.24 0-8.44 4.89-8.44 11.07s3.07 11.07 8 11.07A6.36 6.36 0 0078 29.43l.26.08v2h5.92V10.22h-5.95zm0 12.61a4.5 4.5 0 01-4.39 2.94c-2.26 0-3.24-2.64-3.24-6.26s1-6.22 3.24-6.22a6.73 6.73 0 014.39 1.49zM99.14 4.86a9.17 9.17 0 012.89.46l.73-4.43A10.27 10.27 0 0098.37 0c-4.73 0-7.75 3.28-7.75 8.3v1.92h-2.94v4.52h2.94v16.78h5.92V14.74h4v-4.52h-4V8.3c0-2.38.89-3.44 2.6-3.44zm16.05 21.33a5.37 5.37 0 01-2.17.43c-1.28 0-2.17-.9-2.17-3v-8.88h4.3v-4.52h-4.3V3.41H105v6.81h-2.64v4.52H105v9.15c0 5 2.94 7.84 6.94 7.84a8.39 8.39 0 004-.9zM0 31.68h16.83v4.69H0z"></path></svg>
     </figure>
     <button class="block text-black-50 dark:text-[#fff] md:hidden text-3xl focus:outline-none" id="menu-btn" aria-label="Toggle Menu">
@@ -24,8 +19,8 @@ import Image from "astro/components/Image.astro";
   <nav class="hidden md:flex  items-center mx-2">
 <div class="md:flex-row md:space-x-6 px-3 py-3">
   <a href="#" class="font-bold py-4  text-lg text-secondary-black-50 dark:text-secondary-white-100  hover:text-primary-green-800 dark:hover:text-primary-green-800">Features</a>
-  <a href="#" class="font-bold py-4  text-lg text-secondary-black-50 dark:text-secondary-white-100  hover:text-primary-green-800 dark:hover:text-primary-green-800"> Use Cases</a>
-  <a href="#" class="font-bold py-4  mx-auto text-lg text-secondary-black-50 dark:text-secondary-white-100 hover:text-primary-green-800 dark:hover:text-primary-green-800">Login</a>
+  <a href="https://docs.wraft.app/" target="_blank"class="font-bold py-4  text-lg text-secondary-black-50 dark:text-secondary-white-100  hover:text-primary-green-800 dark:hover:text-primary-green-800">Docs</a>
+  <a href="http://app.wraft.co/login" class="font-bold py-4  mx-auto text-lg text-secondary-black-50 dark:text-secondary-white-100 hover:text-primary-green-800 dark:hover:text-primary-green-800">Login</a>
 </div>
     <button class="text-lg text-primary-green-500 py-3 px-3 rounded-xl font-bold border border-primary-green-600 hover:bg-primary-white-300 hover:text-primary-green-200 dark:text-primary-green-200 dark:hover:text-primary-green-800 hover:border-primary-green-300 dark:hover:border-primary-green-300 transition-colors duration-150 ease-in-out">
       Request Invite
@@ -34,7 +29,6 @@ import Image from "astro/components/Image.astro";
     
   </nav>
 
-  <!-- <div id="overlay" class="hidden fixed inset-0 bg-secondary-gray-400 opacity-50 z-10 md:hidden"></div> -->
 
   <nav id="menu" class="hidden absolute text-lg text-secondary-black-50 dark:text-[#fff_!important] top-full left-0 w-full  h-[100vh] bg-secondary-white-500 dark:bg-[#111111] flex-col space-y-4 p-5 z-20 md:hidden overflow-y-hidden">
     <div class="flex flex-col">
@@ -53,7 +47,6 @@ import Image from "astro/components/Image.astro";
   const menuBtnCross = document.getElementById("menu-btn-cross");
   const body = document.getElementsByTagName("body")[0];
   const menu = document.getElementById("menu");
-  // const overlay = document.getElementById("overlay");
 
   menuBtn.addEventListener("click", () => {
     body.classList.toggle("overflow-y-hidden")
@@ -62,7 +55,6 @@ import Image from "astro/components/Image.astro";
     menuBtn.classList.toggle("block");
     menuBtnCross.classList.toggle("hidden");
     menuBtnCross.classList.toggle("block");
-    // overlay.classList.toggle("hidden");
   });
   menuBtnCross.addEventListener("click", () => {
     body.classList.toggle("overflow-y-hidden")
@@ -71,11 +63,5 @@ import Image from "astro/components/Image.astro";
     menuBtn.classList.toggle("block");
     menuBtnCross.classList.toggle("hidden");
     menuBtnCross.classList.toggle("block");
-    // overlay.classList.toggle("hidden");
   });
-
-  // overlay.addEventListener("click", () => {
-  //   menu.classList.add("hidden");
-  //   // overlay.classList.add("hidden");
-  // });
 </script>
