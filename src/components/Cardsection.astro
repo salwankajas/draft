@@ -5,7 +5,7 @@ import "../style/scrollcard/scrollCards.css";
 ---
 
 <main class="">
-  <section class="overflow-hidden">
+  <section class="overflow-hiddens">
     <div class="mb-20 px-[32px]">
       <h1 class="text-4xl font-bold md:text-5xl leading-[50px] md:leading-[60px] dark:text-secondary-white-500 text-center">
         See what you can do with Wraft
@@ -14,7 +14,7 @@ import "../style/scrollcard/scrollCards.css";
         Case studies from some of our amazing customers who are hiring faster.
       </p>
     </div>
-    <div class="snap-align-none overflow-x-auto no-scrollbar scrollable-container mb-32 scroll-pl-[calc((100%-340px)/2)] scroll-pr-[calc((100%-340px)/2)_!important] md:scroll-pr-[1.25rem_!important] md:scroll-pr-[0rem_important]">
+    <div class="relative left-0 snap-align-none z-[999999] overscroll-x-contain overflow-x-auto w-full no-scrollbar scrollable-container mb-32 scroll-pl-[calc((100%-340px)/2)] scroll-pr-[calc((100%-340px)/2)_!important] md:scroll-pr-[1.25rem_!important] md:scroll-pr-[0rem_important]">
       <div class="pb-[20px] scrollable-content ml-[32px] md:pl-[calc((100%-1140px)/2)_!important]">
         <!-- Card mapping section -->
         <!-- <div class="block sm:hidden w-[10px]"></div> -->
@@ -57,8 +57,8 @@ import "../style/scrollcard/scrollCards.css";
     </div>
   
     <!-- Scrolling Cards Section -->
-    <div class="mb-32  flex justify-center max-w-[1140px] mx-auto">
-      <div class="pb-[20px] flex spaces-x-[16px] w-full pr-[32px] overflow-x-auto  [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+    <div class="mb-32 flex justify-center max-w-[1140px] mx-auto">
+      <div class="relative left-0 z-[999999] overscroll-x-contain no-scrollbar pb-[20px] flex spaces-x-[16px] w-full pr-[32px] overflow-x-auto  [&::-webkit-scrollbar:hidden] [-ms-overflow-style:none] [scrollbar-width:none]">
         <!-- Card 1 -->
         <div class="ml-[32px] flex-shrink-0 w-[240px] h-[338px] p-6 bg-secondary-gray-700  shadow-lg rounded-lg text-start flex flex-col">
           <div class="h-[120px]"></div>

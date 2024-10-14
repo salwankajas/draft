@@ -82,9 +82,10 @@ import coverimage from "../assets/hero/home01.png";
           closePopup();
         });
         
-        var popupCloseButton = document.getElementById('close-container');
-        popupCloseButton.addEventListener('click', function() {
-          body.classList.toggle("overflow-y-hidden")
+        var popupCloseContainer = document.getElementById('close-container');
+        popupCloseContainer.addEventListener('click', function() {
+          body.classList.toggle("overflow-hidden")
+          body.classList.toggle("overscroll-y-contain")
           closePopup();
         });
         

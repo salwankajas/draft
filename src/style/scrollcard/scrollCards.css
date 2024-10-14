@@ -2,18 +2,19 @@
   scroll-snap-type: x mandatory;
   scroll-padding-right: 1.25rem;
   overflow-x: auto;
-  scrollbar-width: none;
+  scrollbar-width: 100px;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
 }
 
 .scrollable-container::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .scrollable-content {
   padding-left: calc(100% - 83rem) ;
-  display: flex;
+  display: flex; 
   scroll-snap-align: start;
   gap: 32px;
   
