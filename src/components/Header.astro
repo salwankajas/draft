@@ -2,10 +2,12 @@
 import Logo from '../components/Logo.astro'
 ---
 <header
-  class="relative flex flex-col md:flex-row justify-between items-center p-4 mx-auto transition-colors duration-300 px-8"
+  class="absolute h-auto w-screen flex flex-col md:flex-row justify-between items-center p-4 mx-auto transition-colors duration-300 px-8"
 >
   <div class="flex justify-between items-center w-full mx-2 xl:w-auto">
-    <Logo />
+    <div class="py-3">
+      <Logo />
+    </div>
     <button
       class="block text-black-50 dark:text-[#fff] xl:hidden text-3xl focus:outline-none"
       id="menu-btn"
@@ -21,7 +23,7 @@ import Logo from '../components/Logo.astro'
       &#10005;
     </button>
   </div>
-  <nav class="hidden xl:flex items-center mx-2">
+  <nav class="ml-[-180px] hidden xl:flex items-center mx-2">
     <div class="flex xl:flex-row xl:gap-10 justify-center items-center">
       <a href="#" class="header-link">Product</a>
       <a href="#" class="header-link">Pricing</a>
@@ -35,7 +37,7 @@ import Logo from '../components/Logo.astro'
       <a href="http://app.wraft.app" class="header-link">Sign in</a>
     <a
       href="https://app.wraft.app/signup"
-      class="btn-header dark:bg-secondary_dark_bg dark:text-primary"
+      class="btn-header dark:bg-secondary dark:text-primary"
     >
       Sign Up
     </a>
