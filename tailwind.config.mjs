@@ -7,6 +7,7 @@ export default {
                 primary: 'var(--primary-color)',
                 secondary: 'var(--secondary-color)',
                 primary_bg: 'var(--primary-bg-color)',
+				secondary_dark_bg: 'var(--secondary-bg-color)',
             },
 		},
 	},
