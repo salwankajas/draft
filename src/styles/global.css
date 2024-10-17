@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .header-link {
+        @apply font-semibold py-4 text-primary dark:text-primary;
+    }
+    .header-link svg{
+        @apply fill-primary;
+    }
+    .btn-header {
+        @apply font-semibold bg-primary text-secondary px-6 text-center flex justify-center items-center rounded-lg py-3;
+    }
+}

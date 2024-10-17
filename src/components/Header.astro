@@ -1,0 +1,110 @@
+---
+import Logo from '../components/Logo.astro'
+---
+<header
+  class="relative flex flex-col md:flex-row justify-between items-center p-4 mx-auto transition-colors duration-300 px-8"
+>
+  <div class="flex justify-between items-center w-full mx-2 xl:w-auto">
+    <Logo />
+    <button
+      class="block text-black-50 dark:text-[#fff] xl:hidden text-3xl focus:outline-none"
+      id="menu-btn"
+      aria-label="Toggle Menu"
+    >
+      &#9776;
+    </button>
+    <button
+      class="hidden text-black-50 dark:text-[#fff] xl:hidden text-3xl focus:outline-none"
+      id="menu-btn-cross"
+      aria-label="Toggle Menu"
+    >
+      &#10005;
+    </button>
+  </div>
+  <nav class="hidden xl:flex items-center mx-2">
+    <div class="flex xl:flex-row xl:gap-10 justify-center items-center">
+      <a href="#" class="header-link">Product</a>
+      <a href="#" class="header-link">Pricing</a>
+      <a href="#" class="header-link">Resources</a>
+    </div>
+  </nav>
+
+  <nav class="hidden xl:flex items-center mx-2">
+    <div class="flex xl:flex-row xl:gap-10 justify-center items-center">
+      <a href="https://docs.wraft.app" class="header-link">Docs</a>
+      <a href="http://app.wraft.app" class="header-link">Sign in</a>
+    <a
+      href="https://app.wraft.app/signup"
+      class="btn-header"
+    >
+      Sign Up
+    </a>
+    <a href="" class="header-link"
+      ><svg
+        width="34"
+        height="34"
+        viewBox="0 0 34 34"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16.9493 0C7.5768 0 0 7.63265 0 17.0753C0 24.6233 4.85471 31.0125 11.5895 33.2739C12.4315 33.4439 12.7399 32.9064 12.7399 32.4544C12.7399 32.0585 12.7122 30.7017 12.7122 29.2879C7.99728 30.3058 7.01545 27.2524 7.01545 27.2524C6.25773 25.2734 5.13504 24.7648 5.13504 24.7648C3.59186 23.7188 5.24745 23.7188 5.24745 23.7188C6.95924 23.8319 7.85747 25.4715 7.85747 25.4715C9.37255 28.0722 11.814 27.3374 12.7961 26.885C12.9363 25.7824 13.3856 25.0191 13.8626 24.5952C10.1022 24.1993 6.14567 22.7293 6.14567 16.1705C6.14567 14.3046 6.81873 12.7781 7.88522 11.5909C7.71696 11.1669 7.12751 9.41384 8.05384 7.06749C8.05384 7.06749 9.48496 6.61508 12.7118 8.82022C14.0934 8.44645 15.5181 8.25631 16.9493 8.25471C18.3805 8.25471 19.8393 8.45282 21.1865 8.82022C24.4137 6.61508 25.8449 7.06749 25.8449 7.06749C26.7712 9.41384 26.1814 11.1669 26.0131 11.5909C27.1077 12.7781 27.753 14.3046 27.753 16.1705C27.753 22.7293 23.7965 24.1709 20.008 24.5952C20.6255 25.1322 21.1584 26.1498 21.1584 27.7613C21.1584 30.0511 21.1307 31.8889 21.1307 32.454C21.1307 32.9064 21.4394 33.4439 22.2811 33.2742C29.0159 31.0122 33.8706 24.6233 33.8706 17.0753C33.8983 7.63265 26.2938 0 16.9493 0Z"
+          ></path>
+      </svg>
+    </a>
+  </div>
+  </nav>
+
+  <nav
+    id="menu"
+    class="hidden absolute text-lg text-secondary-black-50 dark:text-[#fff_!important] top-full left-0 w-full h-[100vh] bg-secondary-white-500 dark:bg-[#111111] flex-col space-y-4 p-5 z-20 xl:hidden overflow-y-hidden"
+  >
+    <div class="flex flex-col">
+      <a
+        href="#"
+        class="py-4 hover:text-primary-green-800 dark:hover:text-primary-green-800 transition-colors duration-150 ease-in-out"
+        >Features</a
+      >
+      <a
+        href="https://docs.wraft.app/"
+        class="py-4 hover:text-primary-green-800 dark:hover:text-primary-green-800 transition-colors duration-150 ease-in-out"
+        >Docs</a
+      >
+      <a
+        href="http://app.wraft.co/login"
+        class="py-4 hover:text-primary-green-800 dark:hover:text-primary-green-800 transition-colors duration-150 ease-in-out"
+        >Login</a
+      >
+    </div>
+    <button
+      class="text-lg font-semibold w-full text-primary-green-700 hover:bg-secondary-white-300 hover:border-primary-green-300 hover:text-primary-green-200 dark:bg-primary-green-800 dark:text-secondary-black-50 dark:hover:bg-primary-green-600 border-[1px] py-3 px-5 rounded-xl border-primary-green-600 transition-colors duration-150 ease-in-out"
+    >
+      Request Invite
+    </button>
+  </nav>
+</header>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn")!;
+  const menuBtnCross = document.getElementById("menu-btn-cross")!;
+  const body = document.getElementsByTagName("body")[0]!;
+  const menu = document.getElementById("menu")!;
+
+  menuBtn.addEventListener("click", () => {
+    body.classList.toggle("overflow-hidden");
+    menu.classList.toggle("hidden");
+    menuBtn.classList.toggle("hidden");
+    menuBtn.classList.toggle("block");
+    menuBtnCross.classList.toggle("hidden");
+    menuBtnCross.classList.toggle("block");
+  });
+  menuBtnCross.addEventListener("click", () => {
+    body.classList.toggle("overflow-hidden");
+    menu.classList.toggle("hidden");
+    menuBtn.classList.toggle("hidden");
+    menuBtn.classList.toggle("block");
+    menuBtnCross.classList.toggle("hidden");
+    menuBtnCross.classList.toggle("block");
+  });
+</script>

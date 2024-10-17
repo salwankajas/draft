@@ -1,0 +1,67 @@
+---
+interface Props {
+	title: string;
+}
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="../../src/styles/global.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content="Wraft help busines move steady and fast with Document Automation System"/>
+		<meta name="keywords" content="clm,document,automation,proposals,sales,hr,contract management"/>
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content="Wraft help busines move steady and fast with Document Automation System">
+		<meta property="og:image" content="/assets/cover.png">
+		<meta property="og:url" content="https://wraft.app">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-primary_bg">
+		<main>
+			<Header />
+			<slot />
+			<Footer/>
+		</main>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--primary-color:#03343C;
+		--secondary-color:#F3FCF1;
+		--primary-bg-color:#FFFFFF;
+	}
+	[data-theme='dark'] {
+		--primary-color:#F3FCF1;
+		--secondary-color:#03343C;
+		--primary-bg-color:#011A1E;
+
+	}
+	html {
+		font-family: 'Manrope', sans-serif;
+		background: #13151a;
+	}
+	body {
+		margin: 0;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
