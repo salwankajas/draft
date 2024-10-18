@@ -8,6 +8,7 @@ export default {
                 secondary: 'var(--secondary-color)',
                 primary_bg: 'var(--primary-bg-color)',
 				secondary_dark_bg: 'var(--secondary-bg-color)',
+				paragraph_primary : 'var(--primary-para-color)'
             },
 		},
 	},

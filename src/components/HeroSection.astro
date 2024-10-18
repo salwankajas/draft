@@ -1,95 +1,124 @@
 ---
 import Image from "astro/components/Image.astro";
 import coverimage from "../assets/hero/home01.png";
+import HeroDesign1 from "./HeroDesign1.astro";
+import HeroDesign2 from "./HeroDesign2.astro";
 ---
-<section class="text-center bg-secondary_dark_bg">
+
+<section
+  class="bg-[var(--secondary-color)] dark:bg-[var(--secondary-bg-color)]"
+>
   <style>
-        .popup-container.show {
-            opacity: 1;
-            pointer-events: auto;
-        }
-    </style>
-    
-  <div class="relative z-10  py-4 ">
-    <div class="absolute inset-0 bg-svg-pattern bg-no-repeat bg-[center_center] bg-cover opacity-25 pointer-events-none z-[-1]"></div>
-    <div class="px-[32px]">
-      <h1 class="font-bold text-4xl md:text-6xl dark:text-secondary-white-500 pt-32 mb-6">
-        Writing Contracts made easy
-      </h1>
-      <p class="text-xl md:text-lg text-secondary-gray-600 dark:text-secondary-gray-1000 mb-2 ">
-        Wraft is an open-source tool that helps write and collaborate official documents with ease.
-      </p>
+    .popup-container.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
 
+  <div class="relative z-10 py-4 h-[800px] overflow-hidden">
+    <div class="relative top-20">
+      <HeroDesign1 class="absolute right-0" />
+      <HeroDesign1 class="absolute left-0 scale-x-[-1]" />
+      <HeroDesign2 class="absolute right-[32px]" />
     </div>
-    <div class="mt-4 flex justify-center gap-[8px]">
-      <a
-        href="http://app.wraft.app"
-        class="text-lg text-secondary-white-500 dark:text-secondary-black-50 py-3 px-4 rounded-xl font-bold bg-primary-green-800 border-primary-green-600 hover:bg-primary-green-600 transition-colors duration-150 ease-in-out"
-      >
-        Get started
-      </a>
-      <button id="popup-button"
-        class="text-lg text-primary-green-500 py-3 px-3 rounded-xl font-bold border border-primary-green-600 hover:bg-primary-white-300 hover:text-primary-green-200 dark:text-primary-green-200 dark:hover:text-primary-green-800 hover:border-primary-green-300 dark:hover:border-primary-green-300 transition-colors duration-150 ease-in-out"
-      >
-        Watch Demo
-      </button>
+    <div class="w-[696px] z-[2] px-[32px] ml-32 mt-32">
+      <div class="text-start">
+        <h1 class="font-bold text-primary text-4xl pt-32 mb-6 md:text-7xl">
+          Writing Contracts made easy
+        </h1>
+        <p class="text-2xl text-primary mb-6 md:text-2xl">
+          Wraft is an open-source tool that helps write and collaborate official
+          documents with ease.
+        </p>
+      </div>
+      <div class="mt-4 flex justify-start gap-4">
+        <div class="btn-full">
+          <a
+            href="http://app.wraft.app"
+          >
+            Request Invite
+          </a>
+        </div>
+        <button
+          id="popup-button"
+          class="btn-outline"
+        >
+          Watch Video
+        </button>
+      </div>
     </div>
 
-    <div id="popup-container" class="popup-container fixed top-0 left-0 w-full h-full z-[9999] flex items-center justify-center bg-[rgba(0,0,0,0.8)] opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
-      <span class="close-button font-medium absolute top-[30px] right-[30px] text-[#fff] cursor-pointer text-xl p-2" id="close-button">&#10005;</span>
-      <div class="video-container z-[1] relative w-[90%] max-w-[800px] h-[60%] my-0 mx-[16px] sm:w-[700px] sm:h-[393.75px] md:w-[800px] md:h-[450px]">
-          <iframe id="youtube-iframe" src="" class="absolute top-0 left-0 w-full h-full" allowfullscreen></iframe>
+    <div
+      id="popup-container"
+      class="popup-container fixed top-0 left-0 w-full h-full z-[9999] flex items-center justify-center bg-[rgba(0,0,0,0.8)] opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out"
+    >
+      <span
+        class="close-button font-medium absolute top-[30px] right-[30px] text-[#fff] cursor-pointer text-xl p-2"
+        id="close-button">&#10005;</span
+      >
+      <div
+        class="video-container z-[1] relative w-[90%] max-w-[800px] h-[60%] my-0 mx-[16px] sm:w-[700px] sm:h-[393.75px] md:w-[800px] md:h-[450px]"
+      >
+        <iframe
+          id="youtube-iframe"
+          src=""
+          class="absolute top-0 left-0 w-full h-full"
+          allowfullscreen></iframe>
       </div>
       <div class="w-full h-full z-[-1] absolute" id="close-container"></div>
     </div>
 
-    <div class="mt-12 md:mt-24">
+    <!-- <div class="mt-12 md:mt-24">
       <Image
         src={coverimage}
         alt="Hero section cover"
         class="mx-auto flex-shrink-0 w-[90%] md:w-[60%] max-w-full lg:max-w-[1004px] md:max-w-[550px] h-auto object-cover"
       />
-    </div>
+    </div> -->
   </div>
   <script>
     const body = document.getElementsByTagName("body")[0]!;
-    function openPopup(videoId:string) {
-            var popupContainer = document.getElementById('popup-container')!;
-            var youtubeIframe = document.getElementById('youtube-iframe') as HTMLIFrameElement;
+    function openPopup(videoId: string) {
+      var popupContainer = document.getElementById("popup-container")!;
+      var youtubeIframe = document.getElementById(
+        "youtube-iframe",
+      ) as HTMLIFrameElement;
 
-            youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
-            popupContainer.classList.add('show');
-        }
-        function closePopup() {
-            var popupContainer = document.getElementById('popup-container')!;
-            var youtubeIframe = document.getElementById('youtube-iframe') as HTMLIFrameElement;
-            
-            // popupContainer.remove()
-            youtubeIframe.src = "";
-            popupContainer.classList.remove('show');
-        }
+      youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+      popupContainer.classList.add("show");
+    }
+    function closePopup() {
+      var popupContainer = document.getElementById("popup-container")!;
+      var youtubeIframe = document.getElementById(
+        "youtube-iframe",
+      ) as HTMLIFrameElement;
 
-        var popupButton = document.getElementById('popup-button')!;
-        popupButton.addEventListener('click', function() {
-          body.classList.toggle("overflow-hidden")
-          body.classList.toggle("overscroll-y-contain")
-            openPopup("I71DmG_t3rA?si=fYvnDjHdWdRhilx5?rel=0&modestbranding=1&autoplay=1");
-        });
+      // popupContainer.remove()
+      youtubeIframe.src = "";
+      popupContainer.classList.remove("show");
+    }
 
-        var popupCloseButton = document.getElementById('close-button')!;
-        popupCloseButton.addEventListener('click', function() {
-          body.classList.toggle("overflow-hidden")
-          body.classList.toggle("overscroll-y-contain")
-          closePopup();
-        });
-        
-        var popupCloseContainer = document.getElementById('close-container')!;
-        popupCloseContainer.addEventListener('click', function() {
-          body.classList.toggle("overflow-hidden")
-          body.classList.toggle("overscroll-y-contain")
-          closePopup();
-        });
-        
+    var popupButton = document.getElementById("popup-button")!;
+    popupButton.addEventListener("click", function () {
+      body.classList.toggle("overflow-hidden");
+      body.classList.toggle("overscroll-y-contain");
+      openPopup(
+        "I71DmG_t3rA?si=fYvnDjHdWdRhilx5?rel=0&modestbranding=1&autoplay=1",
+      );
+    });
+
+    var popupCloseButton = document.getElementById("close-button")!;
+    popupCloseButton.addEventListener("click", function () {
+      body.classList.toggle("overflow-hidden");
+      body.classList.toggle("overscroll-y-contain");
+      closePopup();
+    });
+
+    var popupCloseContainer = document.getElementById("close-container")!;
+    popupCloseContainer.addEventListener("click", function () {
+      body.classList.toggle("overflow-hidden");
+      body.classList.toggle("overscroll-y-contain");
+      closePopup();
+    });
   </script>
-
 </section>
