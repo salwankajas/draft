@@ -1,0 +1,22 @@
+---
+import FeatureList from "./FeatureList.astro";
+const { class: svgClass, subHeading:subHeading, heading:heading,paragraph:paragraph,list1:list1,list2:list2,list3:list3} = Astro.props;
+---
+
+<section
+>
+<div class=`text-center h-[689px] flex items-center justify-center ${svgClass}`>
+  <div class="flex w-full mx-40 justify-between">
+    <div class="w-[400px] text-start">
+      <h3 class="text-primary text-sm opacity-80 mb-3">{subHeading}</h3>
+      <h2 class="sec_heading mb-3">{heading}</h2>
+      <p class="font-light text-sm leading-[28px] text-primary opacity-80 mb-8">{paragraph}</p>
+      <div>
+        <FeatureList heading={list1} />
+        <FeatureList heading={list2} />
+        <FeatureList heading={list3} />
+    </div>
+  </div>
+    <div class="w-[524px] h-[332px] bg-[#333E3F] opacity-20 rounded-lg"></div>
+</div>
+</section>

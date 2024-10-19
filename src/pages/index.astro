@@ -1,10 +1,16 @@
 ---
 import Layout from '../layouts/MainLayout.astro';
-import Hero from '../components/HeroSection.astro';
-import Hero2 from '../components/HeroSection2.astro';
+import Hero from '../components/Hero/HeroSection.astro';
+import Hero2 from '../components/Hero/HeroSectionSecond.astro';
+import Feature from '../components/feature/FeatureSection.astro';
+import Feature2 from '../components/feature/FeatureSectionSecond.astro';
 ---
 
 <Layout title="Wraft - Document Lifecycle Management Platform">
 	<Hero />
 	<Hero2 />
+	<Feature subHeading="The Ultimate Editor for Business" heading="Real-Time Collaboration, Anytime, Anywhere" paragraph="Wraft turns document collaboration into a smooth, frictionless process. Multiple team members can work on the same document in real-time, leaving comments, suggestions, and changes that are tracked and managed efficiently." list1="Structured Contents" list2="Template Library" list3="Markdown Based"/>
+	<Feature class="bg-[var(--secondary-color)] dark:bg-[var(--secondary-bg-color)]" subHeading="The Ultimate Editor for Business" heading="Effortless Document Creation" paragraph="Wraft makes document creation fast and simple with its markdown-first approach. Whether it's contracts, agreements, or official letters, you can craft professional documents without the usual complexity." list1="Structured Contents" list2="Template Library" list3="Markdown Based" />
+	<Feature subHeading="The Ultimate Editor for Business" heading="Manage with Precision" paragraph="Wraft offers built-in Contract Lifecycle Management (CLM) features that let you oversee every stage of your contracts—from drafting to approval, all the way to execution. Automate key workflows, track critical deadlines." list1="Structured Contents" list2="Template Library" list3="Markdown Based"/>
+	<Feature2/>
 </Layout>

@@ -1,0 +1,31 @@
+---
+import FeatureCard from "./featureCard.astro"
+import Rendering from "../icons/Rendering.astro"
+import Email from "../icons/Email.astro"
+import pens from '../icons/Pens.astro'
+---
+<section
+>
+<div class=`h-[689px] bg-[var(--secondary-color)] dark:bg-[var(--secondary-bg-color)] flex items-center`>
+    <div>
+      <div class="w-[340px] mx-40 mb-12">
+        <h2 class="sec_heading text-primary mb-3">Be on brand, everytime</h2>
+        <p class="font-light text-primary text-lg">Learn how Wraft features designed to help your team work more effectively.</p>
+      </div>
+      <div class="mx-40 mb-12">
+        <div class="relative left-0 z-[12] flex gap-x-8">
+          <FeatureCard Icons={Email} Prop={{heading:"Branded Pages",desc:"Bring your brand assets, Letterpads to your corporate fonts. No colour spared."}}/>
+          <FeatureCard Icons={pens} Prop={{heading:"Shared Templates",desc:"Maintain your tone with templates, render conditionally. Every department shines."}}/>
+          <FeatureCard Icons={Rendering} Prop={{heading:"Conditional Rendering",desc:"Not all documents are same. Use custom logic to change templates, or toggle sections."}}/>
+          <FeatureCard Icons={Email} Prop={{heading:"Emails",desc:"Email as attachments. Integrate your favourite provider."}}/>
+        </div>
+      </div>
+    </div>
+</div>
+  <div class="h-[310px] bg-third_bg flex items-center">
+    <div class="w-[340px] mx-40 ">
+      <h2 class="sec_heading text-[#03343C] mb-2">Own your document infra</h2>
+      <p class="font-light text-[#03343C]">Own your document production from start to finish, and beyond</p>
+    </div>
+  </div>
+</section>

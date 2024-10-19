@@ -25,9 +25,21 @@
         @apply font-semibold bg-primary text-secondary px-6 text-center flex justify-center items-center rounded-lg py-3;
     }
     .sec_heading{
-        @apply text-xl text-primary font-medium;
+        @apply text-2xl text-primary font-medium;
     }
     .features h3{
         @apply bg-primary_bg text-primary text-sm py-2 rounded-full px-7 font-medium
+    }
+    .footer h4{
+        @apply text-[#F3FCF1] opacity-50 font-light text-base
+    }
+    .footer a{
+        @apply text-[#F3FCF1] font-thin text-base
+    }
+    .footer .links{
+        @apply flex flex-col gap-2
+    }
+    .footer h4{
+        @apply mb-3
     }
 }
