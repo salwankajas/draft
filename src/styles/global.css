@@ -37,7 +37,7 @@
         @apply text-[#F3FCF1] font-thin text-base
     }
     .footer .links{
-        @apply flex flex-col gap-2
+        @apply flex flex-col gap-1
     }
     .footer h4{
         @apply mb-3
