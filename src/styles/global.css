@@ -31,15 +31,12 @@
         @apply bg-primary_bg text-primary text-sm py-2 rounded-full px-7 font-medium
     }
     .footer h4{
-        @apply text-[#F3FCF1] opacity-50 font-light text-base
+        @apply text-[#F3FCF1] opacity-50 font-light text-base text-nowrap mb-4
     }
     .footer a{
-        @apply text-[#F3FCF1] font-thin text-base
+        @apply text-[#F3FCF1] font-thin text-base text-nowrap
     }
     .footer .links{
         @apply flex flex-col gap-1
-    }
-    .footer h4{
-        @apply mb-3
     }
 }
