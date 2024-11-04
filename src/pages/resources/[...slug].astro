@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/SecondaryLayout.astro';
+import templates from '../../data/templates.json';
+import { generateSlug } from '../../utils/slug.ts';
+export async function getStaticPaths() {
+    return templates.map(({title, desc,subDesc,tags }) => {
+        const slug = generateSlug(title)
+    return {
+      params: {slug},
+      props: { title, desc,subDesc,tags },
+    };
+  });
+}
+
+const { title, desc,subDesc,tags } = Astro.props;
+---
+
+<Layout title="Wraft - Document Lifecycle Management Platform">
+	<section class="">
+    <div class="pl-40 py-52 mr-24 flex">
+      <div class="w-[620px] pr-48">
+        <h2 class="page_header text-2xl font-normal dark:text-2xl dark:font-normal mb-12">{title}</h2>
+        <p class="text-primary opacity-60 text-lg font-light mb-12">{desc}</p>
+        <div class="text-primary text-lg ">
+          {tags.map((tag, index) => (
+            <span >#{tag}{index === tags.length - 1 ? '' : ', '}</span>
+            
+          ))}
+        </div>
+        <div class="bg-primary bg-opacity-80 text-secondary px-12 py-4 w-[260px] text-center text-xl font-semibold my-12">Install</div>
+        <p class="text-primary opacity-60 text-lg font-light my-23">{subDesc}</p>
+      </div>
+        <div class="w-[710px] h-[1075px] bg-secondary">
+           
+        </div>
+    </div>
+</section>
+</Layout>

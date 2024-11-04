@@ -10,6 +10,7 @@ export default {
 				secondary_dark_bg: 'var(--secondary-bg-color)',
 				paragraph_primary : 'var(--primary-para-color)',
 				third_bg:'var(--third-color)',
+				card:'var(--card-color)',
             },
 		},
 	},

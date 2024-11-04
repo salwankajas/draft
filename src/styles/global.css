@@ -6,37 +6,77 @@
     .header-link {
         @apply font-semibold py-4 text-primary dark:text-primary;
     }
-    .header-link svg{
+
+    .header-link svg {
         @apply fill-primary;
     }
+
     .btn-header {
         @apply font-semibold bg-primary text-secondary px-6 text-center flex justify-center items-center rounded-lg py-3;
     }
+
     .btn-full {
         @apply flex items-center text-lg bg-primary text-secondary rounded-full text-center py-3 px-12 font-bold transition-colors duration-150 ease-in-out;
     }
-    .btn-full a:hover{
+
+    .btn-full a:hover {
         /* @apply font-semibold bg-primary text-secondary px-6 text-center flex justify-center items-center rounded-lg py-3; */
     }
+
     .btn-outline {
         @apply flex items-center text-lg bg-secondary text-primary border-primary border-[1px] rounded-full text-center py-3 px-12 font-bold transition-colors duration-150 ease-in-out;
     }
-    .btn-outline a:hover{
+
+    .btn-outline a:hover {
         @apply font-semibold bg-primary text-secondary px-6 text-center flex justify-center items-center rounded-lg py-3;
     }
-    .sec_heading{
+
+    .sec_heading {
         @apply text-2xl text-primary font-medium;
     }
-    .features h3{
+
+    .features h3 {
         @apply bg-primary_bg text-primary text-sm py-2 rounded-full px-7 font-medium
     }
-    .footer h4{
+
+    .footer h4 {
         @apply text-[#F3FCF1] opacity-50 font-light text-base text-nowrap mb-4
     }
-    .footer a{
+
+    .footer a {
         @apply text-[#F3FCF1] font-thin text-base text-nowrap
     }
-    .footer .links{
+
+    .footer .links {
         @apply flex flex-col gap-1
+    }
+    .filter{
+        @apply whitespace-nowrap;
+    }
+    .filter h3{
+        @apply text-lg text-primary font-medium my-3;
+    }
+    .filter h2{
+        @apply text-lg text-primary font-medium opacity-30 mb-6 mt-2;
+    }
+    [data-theme='dark']{
+        .page_header{
+            @apply text-3xl font-semibold;
+            background: linear-gradient(1deg, #4DEF8E 0%, #FFEB3A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+    
+        }
+    }
+    .page_header{
+        @apply text-3xl font-semibold text-primary;
+        /* background: var(--primary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; */
+
     }
 }

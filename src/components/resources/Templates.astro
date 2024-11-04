@@ -1,0 +1,35 @@
+---
+import TemplatesCards from "./TemplatesCards.astro"
+import templates from '../../data/templates.json';
+---
+<section class="">
+    <div class="pl-40 py-52">
+        <h2 class="page_header mb-20">Templates For Every use case</h2>
+        <div class="flex">
+            <div class="mr-28 filter flex flex-col gap-24">
+                <div>
+                    <h2>Types</h2>
+                    <h3>Templates</h3>
+                    <h3>Themes</h3>
+                    <h3>Frames</h3>
+                </div>
+                <div>
+                    <h2>Types</h2>
+                    <h3>Free</h3>
+                    <h3>Paid</h3>
+                </div>
+                <div>
+                    <h2>Layout Engine</h2>
+                    <h3>LaTex</h3>
+                    <h3>Typst</h3>
+                    <h3>HTML</h3>
+                </div>
+            </div>
+            <div class="flex gap-8 w-full mr-12 flex-wrap">
+                {templates.map(template => (
+                    <TemplatesCards title={template.title} key={template.id} />
+                ))}
+            </div>
+        </div>
+    </div>
+</section>

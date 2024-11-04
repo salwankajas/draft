@@ -1,0 +1,28 @@
+---
+const {title} = Astro.props;
+import { generateSlug } from '../../utils/slug.ts';
+---
+<div class="bg-secondary dark:bg-card w-[300px] h-[420px] rounded-lg drop-shadow-xl">
+    <a class="block h-full pt-10" href=`/resources/${generateSlug(title)}`>
+    <div class="bg-[#333E3F] bg-opacity-60 dark:bg-secondary w-full h-[220px] pt-10"></div>
+    <div class="p-6 pr-2 pt-12">
+        <h2 class="sec_heading text-xl mb-2">{title}</h2>
+        <span class="flex items-center gap-1"
+            ><h3 class="opacity-60 text-sm">View Example</h3><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M5.83398 14.1663L14.1673 5.83301M14.1673 5.83301H5.83398M14.1673 5.83301V14.1663"
+                    stroke="#005B13"
+                    stroke-width="1.66667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </div>
+    </a>
+</div>
