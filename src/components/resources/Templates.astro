@@ -1,7 +1,8 @@
 ---
 import TemplatesCards from "./TemplatesCards.astro"
-const siteUrl = new URL(Astro.url);
-const templates = await fetch(`${siteUrl.origin}/templates/data.json`).then(res => res.json());
+// const siteUrl = new URL(Astro.url);
+// const templates = await fetch(`http://localhost:4321/templates/data.json`).then(res => res.json());
+import templates from "../../assets/templates/data.json";
 
 ---
 <section class="">
@@ -28,7 +29,10 @@ const templates = await fetch(`${siteUrl.origin}/templates/data.json`).then(res 
                 </div>
             </div>
             <div class="flex gap-8 w-full mr-12 flex-wrap">
-                {templates.map((template: { title: string; id: string; }) => (
+                <!-- {templates.map((template: { title: string; id: string; }) => (
+                    <TemplatesCards title={template.title} key={template.id} />
+                ))} -->
+                {templates.map((template) => (
                     <TemplatesCards title={template.title} key={template.id} />
                 ))}
             </div>
