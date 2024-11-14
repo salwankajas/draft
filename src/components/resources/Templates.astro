@@ -1,6 +1,8 @@
 ---
 import TemplatesCards from "./TemplatesCards.astro"
-import templates from '../../data/templates.json';
+const siteUrl = new URL(Astro.url);
+const templates = await fetch(`${siteUrl.origin}/templates/data.json`).then(res => res.json());
+
 ---
 <section class="">
     <div class="pl-40 py-52">
@@ -26,7 +28,7 @@ import templates from '../../data/templates.json';
                 </div>
             </div>
             <div class="flex gap-8 w-full mr-12 flex-wrap">
-                {templates.map(template => (
+                {templates.map((template: { title: string; id: string; }) => (
                     <TemplatesCards title={template.title} key={template.id} />
                 ))}
             </div>

@@ -1,9 +1,12 @@
 ---
 import Layout from '../../layouts/SecondaryLayout.astro';
-import templates from '../../data/templates.json';
 import { generateSlug } from '../../utils/slug.ts';
+console.log("templates")
+
 export async function getStaticPaths() {
-    return templates.map(({title, desc,subDesc,tags }) => {
+  const templates:any = await fetch(`${Astro.site!.href}/templates/data.json`).then(response => response.json());
+  console.log(templates)
+    return templates.map(({title, desc,subDesc,tags }:{title:string,desc:string,subDesc:string,tags:string[]}) => {
         const slug = generateSlug(title)
     return {
       params: {slug},
@@ -12,9 +15,8 @@ export async function getStaticPaths() {
   });
 }
 
-const { title, desc,subDesc,tags } = Astro.props;
+const { title, desc,subDesc,tags }:{title:string,desc:string,subDesc:string,tags:string[]} = Astro.props;
 ---
-
 <Layout title="Wraft - Document Lifecycle Management Platform">
 	<section class="">
     <div class="pl-40 py-52 mr-24 flex">
