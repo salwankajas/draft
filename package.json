@@ -18,6 +18,7 @@
     "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "@types/node": "^22.9.0"
+    "@types/node": "^22.9.0",
+    "vite-plugin-static-copy": "^2.1.0"
   }
 }
